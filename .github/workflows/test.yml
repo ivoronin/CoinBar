@@ -9,3 +9,4 @@ jobs:
     uses: ivoronin/github-workflows/.github/workflows/test.yml@main
     with:
       language: swift
+      runner: macos-26

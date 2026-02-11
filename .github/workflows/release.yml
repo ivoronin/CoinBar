@@ -12,5 +12,6 @@ jobs:
     uses: ivoronin/github-workflows/.github/workflows/release.yml@main
     with:
       language: swift
+      runner: macos-26
       brew: true
     secrets: inherit
