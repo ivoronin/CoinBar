@@ -139,6 +139,16 @@ private struct PopoverView: View {
                 .padding(.vertical, 8)
 
             HStack {
+                Text("Version")
+                Spacer()
+                Text(appVersion)
+            }
+            .foregroundStyle(.tertiary)
+
+            Divider()
+                .padding(.vertical, 8)
+
+            HStack {
                 let errorMessage = priceService.error?.userMessage
                     ?? coinList.error?.userMessage
                 Button(errorMessage ?? "Refresh") {
@@ -146,9 +156,6 @@ private struct PopoverView: View {
                 }
                 .keyboardShortcut("r")
                 .foregroundStyle(errorMessage != nil ? .red : .secondary)
-                Spacer()
-                Text(appVersion)
-                    .foregroundStyle(.tertiary)
                 Spacer()
                 Button("Quit") {
                     NSApp.terminate(nil)
