@@ -1,0 +1,31 @@
+# Build
+.build/
+bin/
+dist/
+
+# IDE / AI
+.idea/
+.vscode/
+.claude/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Swift
+.swiftpm/
+Package.resolved
+*.xcodeproj
+*.xcworkspace
+xcuserdata/
+DerivedData/
+
+# App bundle (build artifact)
+*.app
+
+# Docs (keep only README)
+*.md
+!README.md
