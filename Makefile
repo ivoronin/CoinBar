@@ -1,12 +1,12 @@
 PROJECT := CoinBar
 VERSION ?= $(shell git describe --tags --abbrev=0 2>/dev/null || echo dev)
-BUILD_DIR := $(shell swift build -c release --show-bin-path 2>/dev/null || echo .build/release)
+BUILD_DIR := $(shell swift build -c release --disable-sandbox --show-bin-path 2>/dev/null || echo .build/release)
 
 .PHONY: build app release lint test test-all clean
 
 build:
 	echo 'let appVersion = "$(VERSION)"' > Sources/Version.swift
-	swift build -c release
+	swift build -c release --disable-sandbox
 
 app: build
 	rm -rf $(PROJECT).app
